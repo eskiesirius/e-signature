@@ -35,12 +35,12 @@
         <div class="max-w-5xl mx-auto py-6 sm:px-6 lg:px-8">
             <div class="rounded-md bg-blue-50 p-4">
                 <div class="flex">
-                <div class="flex-shrink-0">
-                    <InformationCircleIcon class="h-5 w-5 text-blue-400" aria-hidden="true" />
-                </div>
-                <div class="ml-3 flex-1 md:flex md:justify-between">
-                    <p class="text-sm text-blue-700">We don't store image of your signature.</p>
-                </div>
+                    <div class="flex-shrink-0">
+                        <InformationCircleIcon class="h-5 w-5 text-blue-400" aria-hidden="true" />
+                    </div>
+                    <div class="ml-3 flex-1 md:flex md:justify-between">
+                        <p class="text-sm text-blue-700">We don't store image of your signature. You can check the code here in my <a href="https://github.com/eskiesirius/e-signature" class="link">github</a></p>
+                    </div>
                 </div>
             </div>
             <div class="px-4 py-6 sm:px-0">
@@ -50,17 +50,17 @@
                         :stroke-options="strokeOptions"
                     />
                 </div>
-                <div class="mt-10 space-x-4 text-center">
-                    <button class="clear-btn" @click="clear">
+                <div class="mt-10 text-center grid grid-cols-12 gap-4">
+                    <button class="clear-btn col-span-12 md:col-span-6" @click="clear">
                         Clear and draw again
                     </button>
-                    <button class="download-btn" @click="download">
+                    <button class="download-btn col-span-12 md:col-span-6" @click="download">
                         Download signature
                     </button>
                 </div>
-            </div>
-            <div class="mt-10">
-                Credits to <a href="https://github.com/wobsoriano/v-perfect-signature" class="underline text-blue-600 hover:text-blue-800 visited:text-purple-600">wobsoriano</a> for this component.
+                <div class="mt-10">
+                    Credits to <a href="https://github.com/wobsoriano/v-perfect-signature" class="link">wobsoriano</a> for this component.
+                </div>
             </div>
         </div>
     </main>
@@ -72,5 +72,8 @@
 }
 .download-btn {
     @apply px-4 py-2 font-medium tracking-wide text-white hover:text-gray-800 capitalize transition-colors duration-200 transform rounded-md bg-gray-800 hover:bg-white hover:border-gray-800 hover:border  focus:outline-none;
+}
+.link {
+    @apply underline text-blue-600 hover:text-blue-800 visited:text-purple-600
 }
 </style>
